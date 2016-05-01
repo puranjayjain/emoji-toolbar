@@ -1,0 +1,18 @@
+{
+  "name": "emoji-toolbar",
+  "main": "./lib/emoji-toolbar",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "emoji-toolbar:toggle"
+  },
+  "repository": "https://github.com/puranjayjain/emoji-toolbar",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
