@@ -2,7 +2,7 @@
   "name": "emoji-toolbar",
   "main": "./lib/emoji-toolbar",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Emoji toolbar for quick emoji ❤ in atom",
   "keywords": [
   ],
   "activationCommands": {
@@ -11,8 +11,9 @@
   "repository": "https://github.com/puranjayjain/emoji-toolbar",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.6.0 <2.0.0"
   },
   "dependencies": {
+    "atom-space-pen-views": "^2.2.0"
   }
 }

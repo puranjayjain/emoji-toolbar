@@ -1,18 +1,30 @@
-EmojiToolbarView = require './emoji-toolbar-view'
+EmojiToolbarMainView = require './emoji-toolbar-main-view'
+EmojiToolbarHeaderView = require './emoji-toolbar-header-view.coffee'
 
 {CompositeDisposable} = require 'atom'
+
+{$} = require 'atom-space-pen-views'
 
 module.exports = EmojiToolbar =
   # event subscriptions disposable
   subscriptions: null
 
   # elements
-  footerPanel: null
-  emojiToolbarView: null
+  bottomPanel: null
+  emojiToolbarMainView: null
+  emojiToolbarHeaderView: null
 
   activate: (state) ->
-    @emojiToolbarView = new EmojiToolbarView state.emojiToolbarViewState
-    @footerPanel = atom.workspace.addFooterPanel item: @emojiToolbarView.getElement()
+    @emojiToolbarMainView = new EmojiToolbarMainView state.emojiToolbarMainViewState
+    @emojiToolbarHeaderView = new EmojiToolbarHeaderView state.emojiToolbarHeaderView
+    @bottomPanel = atom.workspace.addBottomPanel item: @emojiToolbarHeaderView.getElement(), visible: false
+    $(@bottomPanel.getItem()).after @emojiToolbarMainView.getElement()
+
+    # add tooltips to the views
+    @emojiToolbarMainView.addTooltips()
+
+    # add events to the views
+    @emojiToolbarHeaderView.addEvents()
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
@@ -21,15 +33,17 @@ module.exports = EmojiToolbar =
     @subscriptions.add atom.commands.add 'atom-workspace', 'emoji-toolbar:toggle': => @toggle()
 
   deactivate: ->
-    @footerPanel.destroy()
+    @bottomPanel.destroy()
     @subscriptions.dispose()
-    @emojiToolbarView.destroy()
+    @emojiToolbarMainView.destroy()
+    @emojiToolbarHeaderView.destroy()
 
   serialize: ->
-    emojiToolbarViewState: @emojiToolbarView.serialize()
+    emojiToolbarMainViewState: @emojiToolbarMainView.serialize()
+    emojiToolbarHeaderView: @emojiToolbarHeaderView.serialize()
 
   toggle: ->
-    if @footerPanel.isVisible()
-      @footerPanel.hide()
+    if @bottomPanel.isVisible()
+      @bottomPanel.hide()
     else
-      @footerPanel.show()
+      @bottomPanel.show()

@@ -4,14 +4,23 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.emoji-toolbar {
+.emoji-toolbar-main {
+  height: 150px;
+  overflow: auto;
+  padding-top: 5px;
+
   button {
-  	padding: 4px;
-    margin: 2px;
+    padding: 4px;
 
     img {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
     }
+  }
+}
+
+.emoji-toolbar-list {
+  &.invisible {
+    display: none;
   }
 }

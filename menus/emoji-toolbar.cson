@@ -2,7 +2,7 @@
 'context-menu':
   'atom-text-editor': [
     {
-      'label': 'Toggle emoji-toolbar'
+      'label': 'Toggle Emoji Toolbar'
       'command': 'emoji-toolbar:toggle'
     }
   ]
@@ -10,7 +10,7 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'emoji-toolbar'
+      'label': 'Emoji Toolbar'
       'submenu': [
         {
           'label': 'Toggle'
