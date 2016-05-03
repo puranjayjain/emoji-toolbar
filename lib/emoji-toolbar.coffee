@@ -24,6 +24,7 @@ module.exports = EmojiToolbar =
     @emojiToolbarMainView.addTooltips()
 
     # add events to the views
+    @emojiToolbarMainView.addEvents()
     @emojiToolbarHeaderView.addEvents()
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable

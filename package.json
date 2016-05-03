@@ -2,7 +2,7 @@
   "name": "emoji-toolbar",
   "main": "./lib/emoji-toolbar",
   "version": "0.0.0",
-  "description": "Emoji toolbar for quick emoji ❤ in atom",
+  "description": "Emoji toolbar for the emoji ❤ in atom",
   "keywords": [
   ],
   "activationCommands": {
