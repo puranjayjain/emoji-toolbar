@@ -14,10 +14,10 @@ There are a number of ways you can help by Contributing to this project, Here ar
 `path-to-atom-installation\packages`<br>
 or<br>
 - Another Path in your device and
-- Create a symbolic link to it with the name `chrome-color-picker` :link:
+- Create a symbolic link to it with the name `emoji-toolbar` :link:
 
 Lastly, Thank you for helping out :grin:
 
 Additional Link [https://github.com/atom/atom/blob/master/docs/contributing-to-packages.md](https://github.com/atom/atom/blob/master/docs/contributing-to-packages.md)
 
-**Note by contributing you adhere to the [code_of_conduct](https://github.com/puranjayjain/chrome-color-picker/blob/master/.github/CODE_OF_CONDUCT.md)**
+**Note by contributing you adhere to the [code_of_conduct](https://github.com/puranjayjain/emoji-toolbar/blob/master/.github/CODE_OF_CONDUCT.md)**

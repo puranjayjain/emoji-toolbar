@@ -1,5 +1,6 @@
 EmojiToolbarMainView = require './emoji-toolbar-main-view'
 EmojiToolbarHeaderView = require './emoji-toolbar-header-view.coffee'
+Config = require './config'
 
 {CompositeDisposable} = require 'atom'
 
@@ -8,6 +9,9 @@ EmojiToolbarHeaderView = require './emoji-toolbar-header-view.coffee'
 module.exports = EmojiToolbar =
   # event subscriptions disposable
   subscriptions: null
+
+  # import the config settings
+  config: Config
 
   # elements
   bottomPanel: null
